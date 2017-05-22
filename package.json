@@ -1,21 +1,22 @@
 {
   "name": "ember-route-helpers",
-  "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
-  "keywords": [
-    "ember-addon"
-  ],
+  "version": "0.0.2",
+  "description": "Routing template helpers",
+  "keywords": [ "ember-addon", "helpers", "ember", "ember-routing"],
   "license": "MIT",
-  "author": "",
+  "author": "BBVAEngineering",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BBVAEngineering/ember-route-helpers"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember test"
   },
   "dependencies": {
     "ember-cli-babel": "5.1.7"
