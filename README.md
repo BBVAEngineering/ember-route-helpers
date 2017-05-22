@@ -1,27 +1,26 @@
 # ember-route-helpers
 
-This README outlines the details of collaborating on this Ember addon.
+Transition into routes with helpers directly on template.
+
+### `(transition-to 'destination' model (query-params foo='bar'))`
+
+`(transition-to)` helper that receives the same argument signature as `link-to` but evaluates to an action that can be called to trigger transition.
+
+```hbs
+<button {{action (transition-to 'index')}}>Go to Index</button>
+```
+
+### `(replace-with 'destination' model (query-params foo='bar'))`
+
+`(replace-with)` helper that transition into another route while replacing the current URL, if possible. This will replace the current history entry instead of adding a new one. Beside that, it is identical to transitionTo in all other respects.
+
+```hbs
+<button {{action (transition-to 'index')}}>Go to Index</button>
+```
+
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-route-helpers`
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```
+ember install ember-route-helpers
+```

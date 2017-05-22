@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('transition-to', function(){
+    this.route('list');
+  });
 });
-
 export default Router;
