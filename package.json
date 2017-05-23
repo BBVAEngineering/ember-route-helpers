@@ -1,8 +1,13 @@
 {
   "name": "ember-route-helpers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Routing template helpers",
-  "keywords": [ "ember-addon", "helpers", "ember", "ember-routing"],
+  "keywords": [
+    "ember-addon",
+    "helpers",
+    "ember",
+    "ember-routing"
+  ],
   "license": "MIT",
   "author": "BBVAEngineering",
   "directories": {

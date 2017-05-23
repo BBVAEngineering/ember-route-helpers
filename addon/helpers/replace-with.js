@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import QueryParams from 'ember-route-helpers/utils/query-params';
 
-const { getOwner, copy } = Ember;
+const { copy, getOwner } = Ember;
 
 export default Ember.Helper.extend({
 

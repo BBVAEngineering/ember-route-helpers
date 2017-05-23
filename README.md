@@ -18,6 +18,14 @@ Transition into routes with helpers directly on template.
 <button {{action (replace-with 'index')}}>Go to Index</button>
 ```
 
+### `(transition-to-external 'destination' (query-params foo='bar'))`
+
+`(transition-to-external)` helper that transition from an Engine to an external route.
+
+```hbs
+<button {{action (transition-to-external 'parent-index' (query-params foo='bar'))}}>Go to Index</button>
+```
+
 
 ## Installation
 
