@@ -38,7 +38,6 @@ export default Ember.Helper.extend({
     const router = owner.lookup('router:main');
     const queryParams = _params[_params.length - 1];
 
-    // Get the external route, defined at config/environment.js
     _params[0] = owner._getExternalRoute(_params[0]);
 
     if (queryParams instanceof QueryParams) {
