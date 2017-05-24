@@ -1,7 +1,7 @@
 import { test } from 'qunit';
 import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 
-moduleForAcceptance('Acceptance | transition to');
+moduleForAcceptance('Acceptance | Helper |transition-to');
 
 
 test('transitioning to /transition-to/list via helper', function(assert) {
