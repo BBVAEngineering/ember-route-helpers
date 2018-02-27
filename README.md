@@ -1,6 +1,23 @@
-# ember-route-helpers [![Build Status](https://travis-ci.org/BBVAEngineering/ember-route-helpers.svg?branch=master)](https://travis-ci.org/BBVAEngineering/ember-route-helpers) [![GitHub version](https://badge.fury.io/gh/BBVAEngineering%2Fember-route-helpers.svg)](https://badge.fury.io/gh/BBVAEngineering%2Fember-route-helpers) [![Dependency Status](https://david-dm.org/BBVAEngineering/ember-route-helpers.svg)](https://david-dm.org/BBVAEngineering/ember-route-helpers)
+# ember-route-helpers
+
+[![Build Status](https://travis-ci.org/BBVAEngineering/ember-route-helpers.svg?branch=master)](https://travis-ci.org/BBVAEngineering/ember-route-helpers)
+[![GitHub version](https://badge.fury.io/gh/BBVAEngineering%2Fember-route-helpers.svg)](https://badge.fury.io/gh/BBVAEngineering%2Fember-route-helpers)
+[![npm version](https://badge.fury.io/js/ember-route-helpers.svg)](https://badge.fury.io/js/ember-route-helpers)
+[![Dependency Status](https://david-dm.org/BBVAEngineering/ember-route-helpers.svg)](https://david-dm.org/BBVAEngineering/ember-route-helpers)
 
 Transition into routes with helpers directly on template.
+
+## Information
+
+[![NPM](https://nodei.co/npm/ember-route-helpers.png?downloads=true&downloadRank=true)](https://nodei.co/npm/ember-route-helpers/)
+
+## Installation
+
+```
+ember install ember-route-helpers
+```
+
+## Usage
 
 ### `(transition-to 'destination' model (query-params foo='bar'))`
 
@@ -34,9 +51,18 @@ Transition into routes with helpers directly on template.
 <button {{action (replace-with-external 'parent-index' (query-params foo='bar'))}}>Go to Index</button>
 ```
 
+## Contribute
 
-## Installation
+If you want to contribute to this addon, please read the [CONTRIBUTING.md](CONTRIBUTING.md).
 
-```
-ember install ember-route-helpers
-```
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/BBVAEngineering/ember-route-helpers/tags).
+
+## Authors
+
+See the list of [contributors](https://github.com/BBVAEngineering/ember-route-helpers/graphs/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
