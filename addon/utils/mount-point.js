@@ -10,19 +10,19 @@ const { isBlank, typeOf } = Ember;
  * @return {String}
  */
 export function prefixMountPoint(mountPoint, propValue) {
-  if (typeOf(propValue) !== 'string') {
-    Ember.assert('propValue argument must be an string', typeOf(propValue) !== 'string');
-  }
+	if (typeOf(propValue) !== 'string') {
+		Ember.assert('propValue argument must be an string', typeOf(propValue) !== 'string');
+	}
 
-  if (typeOf(mountPoint) !== 'string' || isBlank(mountPoint)) {
-    return propValue;
-  }
+	if (typeOf(mountPoint) !== 'string' || isBlank(mountPoint)) {
+		return propValue;
+	}
 
-  if (propValue === 'application') {
-    return mountPoint;
-  }
+	if (propValue === 'application') {
+		return mountPoint;
+	}
 
-  return `${mountPoint}.${propValue}`;
+	return `${mountPoint}.${propValue}`;
 }
 
 /**
@@ -33,9 +33,9 @@ export function prefixMountPoint(mountPoint, propValue) {
  * @return {string|Boolean}. Mount point if is engine; false otherwise.
  */
 export function getMountPoint(owner) {
-  if (owner && typeof owner.mountPoint === 'string') {
-    return owner.mountPoint;
-  }
+	if (owner && typeof owner.mountPoint === 'string') {
+		return owner.mountPoint;
+	}
 
-  return false;
+	return false;
 }

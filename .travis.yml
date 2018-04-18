@@ -1,17 +1,20 @@
 ---
 language: node_js
-node_js:
-  - "6"
-
 sudo: false
+dist: trusty
+node_js: 'stable'
+
+addons:
+  chrome: stable
 
 cache:
   directories:
     - $HOME/.npm
-    - $HOME/.cache # includes bowers cache
+    - node_modules
 
 env:
-  # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
+  # we recommend new addons test the current and previous LTS
+  # as well as latest stable release (bonus points to beta/canary)
   - EMBER_TRY_SCENARIO=ember-lts-2.4
   - EMBER_TRY_SCENARIO=ember-lts-2.8
   - EMBER_TRY_SCENARIO=ember-release
@@ -26,15 +29,18 @@ matrix:
 
 before_install:
   - npm config set spin false
-  - npm install -g bower phantomjs-prebuilt
-  - bower --version
-  - phantomjs --version
+  - npm install -g npm@^5.7
+  - npm --version
 
 install:
-  - npm install
-  - bower install
+  - npm ci
+
+before_script:
+  - sudo chown root /opt/google/chrome/chrome-sandbox
+  - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
-  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
+  - node_modules/.bin/eslint '**/*.js'
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup

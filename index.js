@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-route-helpers'
+	name: 'ember-route-helpers'
 };
