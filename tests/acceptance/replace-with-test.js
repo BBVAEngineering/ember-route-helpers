@@ -4,33 +4,31 @@ import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 moduleForAcceptance('Acceptance | Helper | replace-with');
 
 
-test('replacing with /replace-with/list via helper', function(assert) {
-  visit('/replace-with');
+test('replacing with /replace-with/list via helper', (assert) => {
+	visit('/replace-with');
 
-  andThen(function() {
-    assert.equal(currentURL(), '/replace-with');
-  });
+	andThen(() => {
+		assert.equal(currentURL(), '/replace-with');
+	});
 
-  click('button:contains(Go to Helpers)');
+	click('button:contains(Go to Helpers)');
 
-  andThen(function() {
-    assert.equal(currentPath(), 'replace-with.list');
-  });
-
+	andThen(() => {
+		assert.equal(currentPath(), 'replace-with.list');
+	});
 });
 
 
-test('replacing with /replace-with/list via helper with queryParams', function(assert) {
-  visit('/replace-with');
+test('replacing with /replace-with/list via helper with queryParams', (assert) => {
+	visit('/replace-with');
 
-  andThen(function() {
-    assert.equal(currentURL(), '/replace-with');
-  });
+	andThen(() => {
+		assert.equal(currentURL(), '/replace-with');
+	});
 
-  click('button:contains(Show Query Params)');
+	click('button:contains(Show Query Params)');
 
-  andThen(function() {
-    assert.equal(currentURL(),'/replace-with/list?foo=bar');
-  });
-
+	andThen(() => {
+		assert.equal(currentURL(), '/replace-with/list?foo=bar');
+	});
 });
