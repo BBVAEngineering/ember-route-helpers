@@ -1,7 +1,6 @@
 import { isBlank, typeOf } from '@ember/utils';
 import { assert } from '@ember/debug';
 
-
 /**
  * Prefix a property (usually a routeName) with the mount point, if is an engine.
  *
