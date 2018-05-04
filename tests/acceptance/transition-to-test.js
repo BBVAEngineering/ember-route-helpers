@@ -1,34 +1,28 @@
-import { test } from 'qunit';
-import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
+import { module, test } from 'qunit';
+import { visit, currentURL, currentRouteName, click } from '@ember/test-helpers';
+import { setupApplicationTest } from 'ember-qunit';
 
-moduleForAcceptance('Acceptance | Helper |transition-to');
+module('Acceptance | Helper |transition-to', function(hooks) {
+	setupApplicationTest(hooks);
 
+	test('transitioning to /transition-to/list via helper', async function(assert) {
+		await visit('/transition-to');
 
-test('transitioning to /transition-to/list via helper', (assert) => {
-	visit('/transition-to');
-
-	andThen(() => {
 		assert.equal(currentURL(), '/transition-to');
+
+		await click('button#transition-to-list');
+
+		assert.equal(currentRouteName(), 'transition-to.list');
 	});
 
-	click('button:contains(Go to Helpers)');
 
-	andThen(() => {
-		assert.equal(currentPath(), 'transition-to.list');
-	});
-});
+	test('transitioning to /transition-to/list via helper with queryParams', async function(assert) {
+		await visit('/transition-to');
 
-
-test('transitioning to /transition-to/list via helper with queryParams', (assert) => {
-	visit('/transition-to');
-
-	andThen(() => {
 		assert.equal(currentURL(), '/transition-to');
-	});
 
-	click('button:contains(Show Query Params)');
+		await click('button#transition-to-list-query-params');
 
-	andThen(() => {
 		assert.equal(currentURL(), '/transition-to/list?foo=bar');
 	});
 });

@@ -1,4 +1,3 @@
-/* eslint-env node*/
 'use strict';
 
 module.exports = {
@@ -9,6 +8,11 @@ module.exports = {
 	},
 	extends: 'eslint-config-bbva',
 	env: {
-		browser: true
+		node: true
+	},
+	rules: {
+		'no-sync': 0,
+		'no-process-env': 0,
+		'no-unused-expressions': 0
 	}
 };

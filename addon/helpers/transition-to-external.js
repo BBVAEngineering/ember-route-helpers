@@ -1,7 +1,7 @@
-import Ember from 'ember';
-import QueryParams from 'buzz/utils/query-params';
-
-const { copy, getOwner } = Ember;
+import { getOwner } from '@ember/application';
+import { copy } from '@ember/object/internals';
+import Helper from '@ember/component/helper';
+import QueryParams from '../utils/query-params';
 
 /**
  * Given this "external routes":
@@ -30,7 +30,7 @@ const { copy, getOwner } = Ember;
  * {{my-component onclick=(transition-to-external 'posts' (query-params id=3 comments=true)}}
  * ```
  */
-export default Ember.Helper.extend({
+export default Helper.extend({
 
 	compute([...params]) {
 		const _params = copy(params);

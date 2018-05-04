@@ -1,10 +1,10 @@
-import Ember from 'ember';
-import QueryParams from 'ember-route-helpers/utils/query-params';
-import { getMountPoint, prefixMountPoint } from 'ember-route-helpers/utils/mount-point';
+import Helper from '@ember/component/helper';
+import { copy } from '@ember/object/internals';
+import { getOwner } from '@ember/application';
+import QueryParams from '../utils/query-params';
+import { getMountPoint, prefixMountPoint } from '../utils/mount-point';
 
-const { copy, getOwner } = Ember;
-
-export default Ember.Helper.extend({
+export default Helper.extend({
 
 	compute([...params]) {
 		const _params = copy(params);

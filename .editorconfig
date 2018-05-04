@@ -1,3 +1,5 @@
+root = true
+
 [*]
 end_of_line = lf
 charset = utf-8
@@ -6,13 +8,10 @@ insert_final_newline = true
 indent_style = space
 indent_size = 2
 
-[*.{html,css,hbs,js}]
+[*.js]
 indent_style = tab
 indent_size = tab
 tab_width = 4
-
-[*.hbs]
-insert_final_newline = false
 
 [*.md]
 trim_trailing_whitespace = false
