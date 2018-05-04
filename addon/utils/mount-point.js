@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
-const { isBlank, typeOf } = Ember;
+import { isBlank, typeOf } from '@ember/utils';
+import { assert } from '@ember/debug';
 
 /**
  * Prefix a property (usually a routeName) with the mount point, if is an engine.
@@ -11,7 +10,7 @@ const { isBlank, typeOf } = Ember;
  */
 export function prefixMountPoint(mountPoint, propValue) {
 	if (typeOf(propValue) !== 'string') {
-		Ember.assert('propValue argument must be an string', typeOf(propValue) !== 'string');
+		assert('propValue argument must be an string', typeOf(propValue) !== 'string');
 	}
 
 	if (typeOf(mountPoint) !== 'string' || isBlank(mountPoint)) {

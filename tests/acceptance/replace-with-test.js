@@ -1,34 +1,28 @@
-import { test } from 'qunit';
-import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
+import { module, test } from 'qunit';
+import { visit, currentURL, currentRouteName, click } from '@ember/test-helpers';
+import { setupApplicationTest } from 'ember-qunit';
 
-moduleForAcceptance('Acceptance | Helper | replace-with');
+module('Acceptance | Helper | replace-with', function(hooks) {
+	setupApplicationTest(hooks);
 
+	test('replacing with /replace-with/list via helper', async function(assert) {
+		await visit('/replace-with');
 
-test('replacing with /replace-with/list via helper', (assert) => {
-	visit('/replace-with');
-
-	andThen(() => {
 		assert.equal(currentURL(), '/replace-with');
+
+		await click('button#replace-with-list');
+
+		assert.equal(currentRouteName(), 'replace-with.list');
 	});
 
-	click('button:contains(Go to Helpers)');
 
-	andThen(() => {
-		assert.equal(currentPath(), 'replace-with.list');
-	});
-});
+	test('replacing with /replace-with/list via helper with queryParams', async function (assert) {
+		await visit('/replace-with');
 
-
-test('replacing with /replace-with/list via helper with queryParams', (assert) => {
-	visit('/replace-with');
-
-	andThen(() => {
 		assert.equal(currentURL(), '/replace-with');
-	});
 
-	click('button:contains(Show Query Params)');
+		await click('button#replace-with-list-query-params');
 
-	andThen(() => {
 		assert.equal(currentURL(), '/replace-with/list?foo=bar');
 	});
 });
