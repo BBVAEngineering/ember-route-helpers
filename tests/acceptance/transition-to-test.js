@@ -1,11 +1,21 @@
-import { module, test } from 'qunit';
-import { visit, currentURL, currentRouteName, click } from '@ember/test-helpers';
-import { setupApplicationTest } from 'ember-qunit';
+import {
+	module,
+	test
+} from 'qunit';
+import {
+	visit,
+	currentURL,
+	currentRouteName,
+	click
+} from '@ember/test-helpers';
+import {
+	setupApplicationTest
+} from 'ember-qunit';
 
-module('Acceptance | Helper |transition-to', function(hooks) {
+module('Acceptance | Helper |transition-to', (hooks) => {
 	setupApplicationTest(hooks);
 
-	test('transitioning to /transition-to/list via helper', async function(assert) {
+	test('transitioning to /transition-to/list via helper', async(assert) => {
 		await visit('/transition-to');
 
 		assert.equal(currentURL(), '/transition-to');
@@ -16,7 +26,7 @@ module('Acceptance | Helper |transition-to', function(hooks) {
 	});
 
 
-	test('transitioning to /transition-to/list via helper with queryParams', async function(assert) {
+	test('transitioning to /transition-to/list via helper with queryParams', async(assert) => {
 		await visit('/transition-to');
 
 		assert.equal(currentURL(), '/transition-to');

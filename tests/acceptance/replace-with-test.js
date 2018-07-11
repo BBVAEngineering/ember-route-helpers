@@ -1,11 +1,21 @@
-import { module, test } from 'qunit';
-import { visit, currentURL, currentRouteName, click } from '@ember/test-helpers';
-import { setupApplicationTest } from 'ember-qunit';
+import {
+	module,
+	test
+} from 'qunit';
+import {
+	visit,
+	currentURL,
+	currentRouteName,
+	click
+} from '@ember/test-helpers';
+import {
+	setupApplicationTest
+} from 'ember-qunit';
 
-module('Acceptance | Helper | replace-with', function(hooks) {
+module('Acceptance | Helper | replace-with', (hooks) => {
 	setupApplicationTest(hooks);
 
-	test('replacing with /replace-with/list via helper', async function(assert) {
+	test('replacing with /replace-with/list via helper', async(assert) => {
 		await visit('/replace-with');
 
 		assert.equal(currentURL(), '/replace-with');
@@ -16,7 +26,7 @@ module('Acceptance | Helper | replace-with', function(hooks) {
 	});
 
 
-	test('replacing with /replace-with/list via helper with queryParams', async function (assert) {
+	test('replacing with /replace-with/list via helper with queryParams', async(assert) => {
 		await visit('/replace-with');
 
 		assert.equal(currentURL(), '/replace-with');
