@@ -1,4 +1,3 @@
-import { copy } from '@ember/object/internals';
 import { getOwner } from '@ember/application';
 import Helper from '@ember/component/helper';
 import QueryParams from '../utils/query-params';
@@ -7,7 +6,7 @@ import { getMountPoint, prefixMountPoint } from '../utils/mount-point';
 export default Helper.extend({
 
 	compute([...params]) {
-		const _params = copy(params);
+		const _params = params.slice();
 		const owner = getOwner(this);
 		const router = owner.lookup('router:main');
 		const queryParams = _params[_params.length - 1];
