@@ -9,9 +9,11 @@ const Router = EmberRouter.extend({
 Router.map(function() {
 	this.route('transition-to', function() {
 		this.route('list');
+		this.route('currying', { path: 'currying/:curried_param' });
 	});
 	this.route('replace-with', function() {
 		this.route('list');
+		this.route('currying', { path: 'currying/:curried_param' });
 	});
 });
 

@@ -35,4 +35,15 @@ module('Acceptance | Helper |transition-to', (hooks) => {
 
 		assert.equal(currentURL(), '/transition-to/list?foo=bar');
 	});
+
+
+	test('transitioning to /transition-to/currying via action with curried params', async(assert) => {
+		await visit('/transition-to');
+
+		assert.equal(currentURL(), '/transition-to');
+
+		await click('button#transition-to-currying');
+
+		assert.equal(currentURL(), '/transition-to/currying/curried-value');
+	});
 });
