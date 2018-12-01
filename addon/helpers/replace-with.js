@@ -19,10 +19,8 @@ export default Helper.extend({
 			_params[_params.length - 1] = { queryParams: queryParams.values };
 		}
 
-		return function(value) {
-			router.replaceWith(..._params);
-
-			return value;
+		return function(...invocationArgs) {
+			router.replaceWith(...[..._params, ...invocationArgs]);
 		};
 	}
 
