@@ -2,6 +2,6 @@
 <button id="replace-with-list" {{action (replace-with 'replace-with.list')}}>Go to Helpers</button>
 <button id="replace-with-list-query-params" {{action (replace-with 'replace-with.list' (query-params foo="bar"))}}>Show Query Params</button>
 
-{{#with (action (replace-with "replace-with.currying")) as |replaceAction|}}
+{{#with (replace-with "replace-with.currying") as |replaceAction|}}
   <button id="replace-with-currying" {{action (action replaceAction "curried-value")}}>Test currying</button>
 {{/with}}
