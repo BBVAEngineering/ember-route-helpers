@@ -35,4 +35,15 @@ module('Acceptance | Helper | replace-with', (hooks) => {
 
 		assert.equal(currentURL(), '/replace-with/list?foo=bar');
 	});
+
+
+	test('replacing with /replace-with/currying via action with curried params', async(assert) => {
+		await visit('/replace-with');
+
+		assert.equal(currentURL(), '/replace-with');
+
+		await click('button#replace-with-currying');
+
+		assert.equal(currentURL(), '/replace-with/currying/curried-value');
+	});
 });
