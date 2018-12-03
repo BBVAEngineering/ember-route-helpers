@@ -1,6 +1,5 @@
 import { getOwner } from '@ember/application';
 import Helper from '@ember/component/helper';
-import QueryParams from '../utils/query-params';
 
 /**
  * Given this "external routes":
@@ -39,7 +38,7 @@ export default Helper.extend({
 
 		_params[0] = owner._getExternalRoute(_params[0]);
 
-		if (queryParams instanceof QueryParams) {
+		if (queryParams.isQueryParams) {
 			_params[_params.length - 1] = { queryParams: queryParams.values };
 		}
 
