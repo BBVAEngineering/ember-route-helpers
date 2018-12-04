@@ -6,13 +6,44 @@ module.exports = {
 		ecmaVersion: 2017,
 		sourceType: 'module'
 	},
-	extends: 'eslint-config-bbva',
+	plugins: [
+		'ember'
+	],
+	extends: [
+		'plugin:ember/recommended',
+		'eslint-config-bbva'
+	],
 	env: {
-		node: true
+		browser: true
 	},
-	rules: {
-		'no-sync': 0,
-		'no-process-env': 0,
-		'no-unused-expressions': 0
-	}
+	overrides: [{
+		files: [
+			'.huskyrc.js',
+			'.commitlintrc.js',
+			'.eslintrc.js',
+			'.template-lintrc.js',
+			'ember-cli-build.js',
+			'index.js',
+			'testem.js',
+			'blueprints/*/index.js',
+			'config/**/*.js',
+			'tests/dummy/config/**/*.js'
+		],
+		excludedFiles: [
+			'addon/**',
+			'addon-test-support/**',
+			'app/**',
+			'tests/dummy/app/**'
+		],
+		parserOptions: {
+			sourceType: 'script',
+			ecmaVersion: 2015
+		},
+		env: {
+			browser: false,
+			node: true
+		},
+		plugins: ['node'],
+		rules: require('eslint-plugin-node').configs.recommended.rules
+	}]
 };
