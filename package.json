@@ -21,15 +21,28 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "COVERAGE=true ember test",
+    "check-coverage": "istanbul check-coverage coverage/coverage-final.json --statements 95 --functions 95 --branches 95 --lines 95",
+    "commit": "git-cz",
+    "lint:js": "eslint --ext .js,.ts --max-warnings 0 ./*.js addon app config tests",
+    "posttest": "npm run report-coverage && npm run check-coverage",
+    "report-coverage": "istanbul report --include=coverage/coverage-final.json text",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@semantic-release/changelog": "^3.0.1",
+    "@semantic-release/git": "^7.0.5",
     "broccoli-asset-rev": "2.4.6",
+    "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "3.2.0",
+    "ember-cli-code-coverage": "^1.0.0-beta.7",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars": "^2.0.1",
@@ -48,13 +61,22 @@
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^0.2.23",
     "eslint": "^4.18.2",
-    "eslint-config-bbva": "2.0.2",
-    "loader.js": "^4.2.3"
+    "eslint-config-bbva": "^2.0.2",
+    "eslint-plugin-ember": "^6.0.1",
+    "eslint-plugin-node": "^8.0.0",
+    "istanbul": "^0.4.5",
+    "loader.js": "^4.2.3",
+    "semantic-release": "^15.12.4"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
