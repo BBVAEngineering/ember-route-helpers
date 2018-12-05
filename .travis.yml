@@ -22,7 +22,6 @@ jobs:
 
   include:
     - stage: "Tests"
-      name: "Tests"
       before_install:
         - npm config set spin false
         - npm install -g npm@6
