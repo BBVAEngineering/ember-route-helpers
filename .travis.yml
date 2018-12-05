@@ -24,9 +24,12 @@ jobs:
     - stage: "Tests"
       name: "Tests"
       before_install:
+        - npm config set spin false
+        - npm install -g npm@6
         - npm install -g codecov
         - npm install -g greenkeeper-lockfile@1
         - npm install -g @commitlint/travis-cli
+        - npm --version
       install:
         - if [[ $TRAVIS_BRANCH =~ greenkeeper || $TRAVIS_PULL_REQUEST_BRANCH =~ greenkeeper ]]; then npm install; else npm ci; fi
       before_script:
@@ -59,7 +62,7 @@ jobs:
 
 before_install:
   - npm config set spin false
-  - npm install -g npm@6
+  - npm install -g npm@4
   - npm --version
 
 script:
