@@ -1,3 +1,6 @@
+/* eslint-disable no-process-env */
+'use strict';
+
 const browsers = [
 	'last 1 Chrome versions',
 	'last 1 Firefox versions',

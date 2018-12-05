@@ -23,7 +23,7 @@
     "check-coverage": "istanbul check-coverage coverage/coverage-final.json --statements 50 --functions 50 --branches 50 --lines 50",
     "commit": "git-cz",
     "lint:hbs": "ember-template-lint .",
-    "lint:js": "eslint --ext .js,.ts --max-warnings 0 ./*.js addon app config tests",
+    "lint:js": "eslint --max-warnings 0 ./*.js addon app config tests",
     "start": "ember server",
     "test": "COVERAGE=true ember test",
     "posttest": "npm run report-coverage && npm run check-coverage",
