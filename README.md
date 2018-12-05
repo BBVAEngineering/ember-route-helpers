@@ -2,14 +2,17 @@
 
 [![Build Status](https://travis-ci.org/BBVAEngineering/ember-route-helpers.svg?branch=master)](https://travis-ci.org/BBVAEngineering/ember-route-helpers)
 [![GitHub version](https://badge.fury.io/gh/BBVAEngineering%2Fember-route-helpers.svg)](https://badge.fury.io/gh/BBVAEngineering%2Fember-route-helpers)
-[![npm version](https://badge.fury.io/js/ember-route-helpers.svg)](https://badge.fury.io/js/ember-route-helpers)
+[![NPM version](https://badge.fury.io/js/ember-route-helpers.svg)](https://badge.fury.io/js/ember-route-helpers)
 [![Dependency Status](https://david-dm.org/BBVAEngineering/ember-route-helpers.svg)](https://david-dm.org/BBVAEngineering/ember-route-helpers)
-
-Transition into routes with helpers directly on template.
+[![codecov](https://codecov.io/gh/BBVAEngineering/ember-route-helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/BBVAEngineering/ember-route-helpers)
+[![Greenkeeper badge](https://badges.greenkeeper.io/BBVAEngineering/ember-route-helpers.svg)](https://greenkeeper.io/)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-route-helpers.svg)](https://emberobserver.com/addons/ember-route-helpers)
 
 ## Information
 
 [![NPM](https://nodei.co/npm/ember-route-helpers.png?downloads=true&downloadRank=true)](https://nodei.co/npm/ember-route-helpers/)
+
+Transition into routes with helpers directly on template.
 
 ## Installation
 
