@@ -1,3 +1,8 @@
 <h2>Helpers</h2>
-<button id="transition-to-list" {{action (transition-to 'transition-to.list')}}>Go to Helpers</button>
-<button id="transition-to-list-query-params" {{action (transition-to 'transition-to.list' (query-params foo="bar"))}}>Show Query Params</button>
+<button id="transition-to-list" {{action (transition-to "transition-to.list")}}>Go to Helpers</button>
+<button
+		id="transition-to-list-query-params"
+		{{action (transition-to "transition-to.list" (query-params foo="bar"))}}
+>
+		Show Query Params
+</button>
