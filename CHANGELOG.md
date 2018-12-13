@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.1.0...v2.1.1) (2018-12-13)
+
+
+### Bug Fixes
+
+* **package:** update ember-cli-babel to version 7.2.0 ([d07d194](https://github.com/BBVAEngineering/ember-route-helpers/commit/d07d194))
+
 # [2.1.0](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.0.1...v2.1.0) (2018-12-10)
 
 
