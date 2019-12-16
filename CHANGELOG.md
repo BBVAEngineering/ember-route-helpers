@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.1.1...v2.1.2) (2019-12-16)
+
+
+### Bug Fixes
+
+* **app:** remove orphaned export ([c8abf6b](https://github.com/BBVAEngineering/ember-route-helpers/commit/c8abf6b))
+
 ## [2.1.1](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.1.0...v2.1.1) (2018-12-13)
 
 
