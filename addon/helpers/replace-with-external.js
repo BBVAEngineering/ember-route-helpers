@@ -1,5 +1,5 @@
-import Helper from '@ember/component/helper';
 import { getOwner } from '@ember/application';
+import TransitionHelper from './transition';
 
 /**
  * Given this "external routes":
@@ -28,21 +28,12 @@ import { getOwner } from '@ember/application';
  * {{my-component onclick=(replace-with-external 'posts' (query-params id=3 comments=true)}}
  * ```
  */
-export default Helper.extend({
-	compute([...params]) {
-		const _params = params.slice();
+export default class TransitionToHelper extends TransitionHelper {
+	transitionMethod = 'replaceWith';
+
+	getRouteName(routeName) {
 		const owner = getOwner(this);
-		const router = owner.lookup('router:main');
-		const queryParams = _params[_params.length - 1];
 
-		_params[0] = owner._getExternalRoute(_params[0]);
-
-		if (queryParams.isQueryParams) {
-			_params[_params.length - 1] = { queryParams: queryParams.values };
-		}
-
-		return function (...invocationArgs) {
-			router.replaceWith(...[..._params, ...invocationArgs]);
-		};
-	},
-});
+		return owner._getExternalRoute(routeName);
+	}
+}

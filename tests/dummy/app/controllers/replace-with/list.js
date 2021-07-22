@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 
-export default Controller.extend({
-	queryParams: ['foo'],
-	foo: '',
-});
+export default class ReplaceWithController extends Controller {
+	queryParams = ['foo'];
+	foo = '';
+}

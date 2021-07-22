@@ -3,8 +3,8 @@
 <h1>ember-route-helpers</h1>
 
 <div class="nav">
-	<button id="transition-to" onclick={{action (transition-to "transition-to")}} type="button">Transition To</button>
-	<button id="replace-with" onclick={{action (replace-with "transition-to")}} type="button">Replace With</button>
+	<button id="transition-to" {{on 'click' (transition-to "transition-to")}} type="button">Transition To</button>
+	<button id="replace-with" {{on 'click' (replace-with "transition-to")}} type="button">Replace With</button>
 </div>
 
 {{outlet}}
