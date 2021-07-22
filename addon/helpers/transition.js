@@ -57,7 +57,9 @@ export default class TransitionHelper extends Helper {
 
 			routeName = this.getRouteName(routeName, mountPoint);
 
-			const params = handleQueryParams([routeName, ...rest]);
+			const params = handleQueryParams(
+				[routeName, ...rest].filter(Boolean)
+			);
 
 			return router[this.transitionMethod](...params);
 		};
