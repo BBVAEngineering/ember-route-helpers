@@ -6132,13 +6132,6 @@ ember-rfc176-data@^0.3.13, ember-rfc176-data@^0.3.15, ember-rfc176-data@^0.3.17:
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/ember-rfc176-data/-/ember-rfc176-data-0.3.17.tgz#d4fc6c33abd6ef7b3440c107a28e04417b49860a"
   integrity sha1-1PxsM6vW73s0QMEHoo4EQXtJhgo=
 
-ember-route-helpers@^2.1.2:
-  version "2.1.2"
-  resolved "https://descinet.bbva.es/artifactory/api/npm/npm/ember-route-helpers/-/ember-route-helpers-2.1.2.tgz#1b7cd950d8f29857f2fd528582d333c427210af2"
-  integrity sha1-G3zZUNjymFfy/VKFgtMzxCchCvI=
-  dependencies:
-    ember-cli-babel "^7.7.3"
-
 ember-router-generator@^2.0.0:
   version "2.0.0"
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/ember-router-generator/-/ember-router-generator-2.0.0.tgz#d04abfed4ba8b42d166477bbce47fccc672dbde0"
