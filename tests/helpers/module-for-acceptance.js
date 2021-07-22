@@ -4,24 +4,24 @@ import destroyApp from '../helpers/destroy-app';
 import { Promise } from 'rsvp';
 
 export default function (name, options = {}) {
-	module(name, {
-		beforeEach() {
-			this.application = startApp();
+  module(name, {
+    beforeEach() {
+      this.application = startApp();
 
-			if (options.beforeEach) {
-				return options.beforeEach.apply(this, arguments);
-			}
+      if (options.beforeEach) {
+        return options.beforeEach.apply(this, arguments);
+      }
 
-			return null;
-		},
+      return null;
+    },
 
-		afterEach() {
-			const afterEach =
-				options.afterEach && options.afterEach.apply(this, arguments);
+    afterEach() {
+      const afterEach =
+        options.afterEach && options.afterEach.apply(this, arguments);
 
-			return Promise.resolve(afterEach).then(() =>
-				destroyApp(this.application)
-			);
-		},
-	});
+      return Promise.resolve(afterEach).then(() =>
+        destroyApp(this.application)
+      );
+    },
+  });
 }

@@ -16,9 +16,9 @@ Transition into routes with helpers directly on template.
 
 ## Requirements
 
-* Ember.js v3.20 or above
-* Ember CLI v3.20 or above
-* Node.js v10 or above
+- Ember.js v3.20 or above
+- Ember CLI v3.20 or above
+- Node.js v10 or above
 
 ## Installation
 
@@ -49,7 +49,9 @@ ember install ember-route-helpers
 `(transition-to-external)` helper that transition from an Engine to an external route.
 
 ```hbs
-<button {{action (transition-to-external 'parent-index' (query-params foo='bar'))}}>Go to Index</button>
+<button
+  {{action (transition-to-external 'parent-index' (query-params foo='bar'))}}
+>Go to Index</button>
 ```
 
 ### `(replace-with-external 'destination' (query-params foo='bar'))`
@@ -57,7 +59,9 @@ ember install ember-route-helpers
 `(replace-with-external)` helper that transition (replacing) from an Engine to an external route.
 
 ```hbs
-<button {{action (replace-with-external 'parent-index' (query-params foo='bar'))}}>Go to Index</button>
+<button
+  {{action (replace-with-external 'parent-index' (query-params foo='bar'))}}
+>Go to Index</button>
 ```
 
 ## Contribute

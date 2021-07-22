@@ -10,40 +10,40 @@ import { assert } from '@ember/debug';
  * @return {String}
  */
 export function prefixMountPoint(mountPoint, propValue) {
-	if (typeOf(propValue) !== 'string') {
-		assert(
-			'propValue argument must be an string',
-			typeOf(propValue) !== 'string'
-		);
-	}
+  if (typeOf(propValue) !== 'string') {
+    assert(
+      'propValue argument must be an string',
+      typeOf(propValue) !== 'string'
+    );
+  }
 
-	if (typeOf(mountPoint) !== 'string' || isBlank(mountPoint)) {
-		return propValue;
-	}
+  if (typeOf(mountPoint) !== 'string' || isBlank(mountPoint)) {
+    return propValue;
+  }
 
-	if (propValue === 'application') {
-		deprecate(
-			`Use "${mountPoint}" instead of "${propValue}" as the routeName of this helper.`,
-			false,
-			{
-				id: 'ember-route-helpers',
-				until: '2.2.0',
-			}
-		);
+  if (propValue === 'application') {
+    deprecate(
+      `Use "${mountPoint}" instead of "${propValue}" as the routeName of this helper.`,
+      false,
+      {
+        id: 'ember-route-helpers',
+        until: '2.2.0',
+      }
+    );
 
-		return mountPoint;
-	}
+    return mountPoint;
+  }
 
-	deprecate(
-		`Use "${mountPoint}.${propValue}" instead of "${propValue}" as the routeName of this helper.`,
-		false,
-		{
-			id: 'ember-route-helpers',
-			until: '2.2.0',
-		}
-	);
+  deprecate(
+    `Use "${mountPoint}.${propValue}" instead of "${propValue}" as the routeName of this helper.`,
+    false,
+    {
+      id: 'ember-route-helpers',
+      until: '2.2.0',
+    }
+  );
 
-	return `${mountPoint}.${propValue}`;
+  return `${mountPoint}.${propValue}`;
 }
 
 /**
@@ -54,9 +54,9 @@ export function prefixMountPoint(mountPoint, propValue) {
  * @return {string|Boolean}. Mount point if is engine; false otherwise.
  */
 export function getMountPoint(owner) {
-	if (owner && typeof owner.mountPoint === 'string') {
-		return owner.mountPoint;
-	}
+  if (owner && typeof owner.mountPoint === 'string') {
+    return owner.mountPoint;
+  }
 
-	return false;
+  return false;
 }

@@ -1,4 +1,4 @@
 export {
-	default,
-	transitionTo,
+  default,
+  transitionTo,
 } from 'ember-route-helpers/helpers/transition-to';

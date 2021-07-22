@@ -29,9 +29,9 @@ import TransitionHelper from './transition';
  * ```
  */
 export default class TransitionToHelper extends TransitionHelper {
-	getRouteName(routeName) {
-		const owner = getOwner(this);
+  getRouteName(routeName) {
+    const owner = getOwner(this);
 
-		return owner._getExternalRoute(routeName);
-	}
+    return owner._getExternalRoute(routeName);
+  }
 }

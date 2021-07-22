@@ -29,11 +29,11 @@ import TransitionHelper from './transition';
  * ```
  */
 export default class TransitionToHelper extends TransitionHelper {
-	transitionMethod = 'replaceWith';
+  transitionMethod = 'replaceWith';
 
-	getRouteName(routeName) {
-		const owner = getOwner(this);
+  getRouteName(routeName) {
+    const owner = getOwner(this);
 
-		return owner._getExternalRoute(routeName);
-	}
+    return owner._getExternalRoute(routeName);
+  }
 }
