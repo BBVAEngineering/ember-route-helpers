@@ -22,6 +22,7 @@
 /.watchmanconfig
 /bower.json
 /config/ember-try.js
+/CONTRIBUTING.md
 /ember-cli-build.js
 /testem.js
 /tests/
