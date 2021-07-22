@@ -3,6 +3,6 @@
 
 module.exports = {
 	env: {
-		embertest: true
-	}
+		embertest: true,
+	},
 };

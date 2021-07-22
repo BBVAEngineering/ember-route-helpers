@@ -10,7 +10,10 @@ import { assert } from '@ember/debug';
  */
 export function prefixMountPoint(mountPoint, propValue) {
 	if (typeOf(propValue) !== 'string') {
-		assert('propValue argument must be an string', typeOf(propValue) !== 'string');
+		assert(
+			'propValue argument must be an string',
+			typeOf(propValue) !== 'string'
+		);
 	}
 
 	if (typeOf(mountPoint) !== 'string' || isBlank(mountPoint)) {

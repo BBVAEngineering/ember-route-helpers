@@ -3,7 +3,6 @@ import Helper from '@ember/component/helper';
 import { getMountPoint, prefixMountPoint } from '../utils/mount-point';
 
 export default Helper.extend({
-
 	compute([...params]) {
 		const _params = params.slice();
 		const owner = getOwner(this);
@@ -18,9 +17,8 @@ export default Helper.extend({
 			_params[_params.length - 1] = { queryParams: queryParams.values };
 		}
 
-		return function(...invocationArgs) {
+		return function (...invocationArgs) {
 			router.transitionTo(...[..._params, ...invocationArgs]);
 		};
-	}
-
+	},
 });
