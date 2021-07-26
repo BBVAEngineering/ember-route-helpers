@@ -4,5 +4,5 @@
 <button id="transition-to-list-query-params" type="button" {{on 'click' (transition-to "transition-to.list" (query-params foo="bar"))}}>Show Query Params</button>
 
 {{#with (transition-to "transition-to.currying") as |transitionAction|}}
-	<button id="transition-to-currying" type="button" {{on 'click' (transitionAction "curried-value" noArgs=true)}}>Test currying</button>
+	<button id="transition-to-currying" type="button" {{on 'click' (fn (transitionAction "curried-value"))}}>Test currying</button>
 {{/with}}

@@ -4,5 +4,5 @@
 <button id="replace-with-list-query-params" type="button" {{on 'click' (replace-with "replace-with.list" (query-params foo="bar"))}}>Show Query Params</button>
 
 {{#with (replace-with "replace-with.currying") as |replaceAction|}}
-	<button id="replace-with-currying" type="button" {{on 'click' (replaceAction "curried-value")}}>Test currying</button>
+	<button id="replace-with-currying" type="button" {{on 'click' (fn (replaceAction "curried-value"))}}>Test currying</button>
 {{/with}}
