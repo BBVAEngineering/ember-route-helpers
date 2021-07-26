@@ -1,7 +1,8 @@
 <h2>Helpers</h2>
-<button id="replace-with-list" {{action (replace-with "replace-with.list")}}>Go to Helpers</button>
-<button id="replace-with-list-query-params" {{action (replace-with "replace-with.list" (query-params foo="bar"))}}>Show Query Params</button>
+
+<button id="replace-with-list" type="button" {{on 'click' (replace-with "replace-with.list")}}>Go to Helpers</button>
+<button id="replace-with-list-query-params" type="button" {{on 'click' (replace-with "replace-with.list" (query-params foo="bar"))}}>Show Query Params</button>
 
 {{#with (replace-with "replace-with.currying") as |replaceAction|}}
-	<button id="replace-with-currying" {{action (action replaceAction "curried-value")}}>Test currying</button>
+	<button id="replace-with-currying" type="button" {{on 'click' (fn (replaceAction "curried-value"))}}>Test currying</button>
 {{/with}}

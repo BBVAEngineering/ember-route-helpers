@@ -1,7 +1,8 @@
 <h2>Helpers</h2>
-<button id="transition-to-list" {{action (transition-to "transition-to.list")}}>Go to Helpers</button>
-<button id="transition-to-list-query-params" {{action (transition-to "transition-to.list" (query-params foo="bar"))}}>Show Query Params</button>
+
+<button id="transition-to-list" type="button" {{on 'click' (transition-to "transition-to.list")}}>Go to Helpers</button>
+<button id="transition-to-list-query-params" type="button" {{on 'click' (transition-to "transition-to.list" (query-params foo="bar"))}}>Show Query Params</button>
 
 {{#with (transition-to "transition-to.currying") as |transitionAction|}}
-	<button id="transition-to-currying" {{action (action transitionAction "curried-value")}}>Test currying</button>
+	<button id="transition-to-currying" type="button" {{on 'click' (fn (transitionAction "curried-value"))}}>Test currying</button>
 {{/with}}

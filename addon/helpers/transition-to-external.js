@@ -1,5 +1,5 @@
 import { getOwner } from '@ember/application';
-import Helper from '@ember/component/helper';
+import TransitionHelper from './transition';
 
 /**
  * Given this "external routes":
@@ -28,23 +28,10 @@ import Helper from '@ember/component/helper';
  * {{my-component onclick=(transition-to-external 'posts' (query-params id=3 comments=true)}}
  * ```
  */
-export default Helper.extend({
+export default class TransitionToHelper extends TransitionHelper {
+  getRouteName(routeName) {
+    const owner = getOwner(this);
 
-	compute([...params]) {
-		const _params = params.slice();
-		const owner = getOwner(this);
-		const router = owner.lookup('router:main');
-		const queryParams = _params[_params.length - 1];
-
-		_params[0] = owner._getExternalRoute(_params[0]);
-
-		if (queryParams.isQueryParams) {
-			_params[_params.length - 1] = { queryParams: queryParams.values };
-		}
-
-		return function(...invocationArgs) {
-			router.transitionTo(...[..._params, ...invocationArgs]);
-		};
-	}
-
-});
+    return owner._getExternalRoute(routeName);
+  }
+}
