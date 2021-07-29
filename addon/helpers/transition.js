@@ -1,5 +1,6 @@
 import { getOwner } from '@ember/application';
 import Helper from '@ember/component/helper';
+import { isPresent } from '@ember/utils';
 import { setHelperManager, capabilities } from '@ember/helper';
 import handleQueryParams from '../utils/handle-query-params';
 import { getMountPoint, prefixMountPoint } from '../utils/mount-point';
@@ -55,7 +56,7 @@ export default class TransitionHelper extends Helper {
 
       routeName = this.getRouteName(routeName, mountPoint);
 
-      const params = handleQueryParams([routeName, ...rest].filter(Boolean));
+      const params = handleQueryParams([routeName, ...rest].filter(isPresent));
 
       return router[this.transitionMethod](...params);
     };
