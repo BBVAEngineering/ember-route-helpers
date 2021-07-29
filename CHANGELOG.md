@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.2.0...v2.3.0) (2021-07-29)
+
+
+### Features
+
+* prevent filtering falsy values ([46baf1b](https://github.com/BBVAEngineering/ember-route-helpers/commit/46baf1b472c5065a642a3436459ed00bd84a54a7))
+
 # [2.2.0](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.1.2...v2.2.0) (2021-07-26)
 
 
