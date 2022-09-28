@@ -8,22 +8,6 @@ module.exports = async function () {
     useYarn: true,
     scenarios: [
       {
-        name: 'ember-lts-3.20',
-        npm: {
-          devDependencies: {
-            'ember-source': '~3.20.5',
-          },
-        },
-      },
-      {
-        name: 'ember-lts-3.24',
-        npm: {
-          devDependencies: {
-            'ember-source': '~3.24.3',
-          },
-        },
-      },
-      {
         name: 'ember-release',
         npm: {
           devDependencies: {
@@ -48,30 +32,17 @@ module.exports = async function () {
         },
       },
       {
-        name: 'ember-default-with-jquery',
+        name: 'ember-octane',
         env: {
           EMBER_OPTIONAL_FEATURES: JSON.stringify({
-            'jquery-integration': true,
-          }),
-        },
-        npm: {
-          devDependencies: {
-            '@ember/jquery': '^1.1.0',
-          },
-        },
-      },
-      {
-        name: 'ember-classic',
-        env: {
-          EMBER_OPTIONAL_FEATURES: JSON.stringify({
-            'application-template-wrapper': true,
+            'application-template-wrapper': false,
             'default-async-observers': false,
-            'template-only-glimmer-components': false,
+            'template-only-glimmer-components': true,
           }),
         },
         npm: {
           ember: {
-            edition: 'classic',
+            edition: 'octane',
           },
         },
       },

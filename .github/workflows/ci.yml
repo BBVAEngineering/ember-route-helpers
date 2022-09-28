@@ -10,7 +10,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 14
           cache: yarn
       - name: Install dependencies
         run: yarn install
@@ -38,8 +38,7 @@ jobs:
         ember_try_scenario:
           - ember-release
           - ember-beta
-          - ember-default-with-jquery
-          - ember-classic
+          - ember-octane
           - embroider-safe
           - embroider-optimized
         experimental: [false]
@@ -54,7 +53,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 14
           cache: yarn
       - name: Install dependencies
         run: yarn install
@@ -74,7 +73,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 14
           registry-url: 'https://registry.npmjs.org'
       - name: Configure CI Git User
         run: |
