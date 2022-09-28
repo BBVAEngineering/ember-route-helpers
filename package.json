@@ -95,7 +95,7 @@
     "prettier": "^2.5.1",
     "qunit": "^2.19.1",
     "qunit-dom": "^2.0.0",
-    "semantic-release": "^17.4.4",
+    "semantic-release": "^19.0.3",
     "travis-deploy-once": "^5.0.9",
     "webpack": "^5"
   },
