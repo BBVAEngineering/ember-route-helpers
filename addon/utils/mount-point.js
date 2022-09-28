@@ -1,4 +1,3 @@
-import { deprecate } from '@ember/application/deprecations';
 import { isBlank, typeOf } from '@ember/utils';
 import { assert } from '@ember/debug';
 
@@ -22,26 +21,8 @@ export function prefixMountPoint(mountPoint, propValue) {
   }
 
   if (propValue === 'application') {
-    deprecate(
-      `Use "${mountPoint}" instead of "${propValue}" as the routeName of this helper.`,
-      false,
-      {
-        id: 'ember-route-helpers',
-        until: '2.2.0',
-      }
-    );
-
     return mountPoint;
   }
-
-  deprecate(
-    `Use "${mountPoint}.${propValue}" instead of "${propValue}" as the routeName of this helper.`,
-    false,
-    {
-      id: 'ember-route-helpers',
-      until: '2.2.0',
-    }
-  );
 
   return `${mountPoint}.${propValue}`;
 }
