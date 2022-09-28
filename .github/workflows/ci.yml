@@ -38,8 +38,7 @@ jobs:
         ember_try_scenario:
           - ember-release
           - ember-beta
-          - ember-default-with-jquery
-          - ember-classic
+          - ember-octane
           - embroider-safe
           - embroider-optimized
         experimental: [false]
