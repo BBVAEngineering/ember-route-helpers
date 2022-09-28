@@ -32,20 +32,7 @@ module.exports = async function () {
         },
       },
       {
-        name: 'ember-default-with-jquery',
-        env: {
-          EMBER_OPTIONAL_FEATURES: JSON.stringify({
-            'jquery-integration': true,
-          }),
-        },
-        npm: {
-          devDependencies: {
-            '@ember/jquery': '^1.1.0',
-          },
-        },
-      },
-      {
-        name: 'ember-classic',
+        name: 'ember-octane',
         env: {
           EMBER_OPTIONAL_FEATURES: JSON.stringify({
             'application-template-wrapper': false,
@@ -55,7 +42,7 @@ module.exports = async function () {
         },
         npm: {
           ember: {
-            edition: 'classic',
+            edition: 'octane',
           },
         },
       },
