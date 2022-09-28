@@ -1,3 +1,16 @@
+# [3.0.0](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.3.0...v3.0.0) (2022-09-28)
+
+
+### Features
+
+* update Ember 4 support ([d962970](https://github.com/BBVAEngineering/ember-route-helpers/commit/d9629703e719cf204db201176c987790d4bcce3c))
+* update node 14 ci ([7285fd3](https://github.com/BBVAEngineering/ember-route-helpers/commit/7285fd311e1b20f99d53cca48a9f8766223dd072))
+
+
+### BREAKING CHANGES
+
+* update Ember 4 dependencies
+
 # [2.3.0](https://github.com/BBVAEngineering/ember-route-helpers/compare/v2.2.0...v2.3.0) (2021-07-29)
 
 
